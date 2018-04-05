@@ -45,12 +45,9 @@ cacheSolve <- function(x, ...)
       message("the inverse matrix is:")
       return(inv_matrix)
       }
-   else
-      {
          ##calculating inverse 
          xdata <- x$get() ##getting x matrix
          inv_matrix <- solve(xdata, ...) 
          x$setinverse(inv_matrix)
-         return(inv_matrix)
-      }
+         print(inv_matrix)
 }
